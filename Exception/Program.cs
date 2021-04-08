@@ -57,13 +57,13 @@ namespace MyExceptionTask
    
     }
 
-    class Program
+    public class ExcExamples
     {
-        static void Main(string[] args)
+        public static void ExceptionExamples()
         {
             try
             {
-                
+
             }
             catch (ArrException ex)
             {
@@ -94,7 +94,7 @@ namespace MyExceptionTask
                 */
 
                 FileInfo fi1 = null;
-                var tmp = fi1.Length;
+                //var tmp = fi1.Length;
 
                 FileInfo fi2 = new FileInfo("t.txt");
                 fi2.Open(FileMode.Open);
@@ -115,23 +115,23 @@ namespace MyExceptionTask
                     new ArgumentNullException(),
                 };
             }
-            catch(ArrException ex)
+            catch (ArrException ex)
             {
                 Console.WriteLine(ex.Message);
             }
-            catch(DivideByZeroException ex)
+            catch (DivideByZeroException ex)
             {
                 Console.WriteLine(ex.Message);
             }
-            catch(FileNotFoundException ex)
+            catch (FileNotFoundException ex)
             {
                 Console.WriteLine(ex.Message);
             }
-            catch(RankException ex)
+            catch (RankException ex)
             {
                 Console.WriteLine(ex.Message);
             }
-            catch(ArgumentNullException ex)
+            catch (ArgumentNullException ex)
             {
                 Console.WriteLine(ex.Message);
             }
@@ -139,6 +139,14 @@ namespace MyExceptionTask
             {
                 Console.WriteLine("job is done!");
             }
+        }
+    }
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ExcExamples.ExceptionExamples();
         }
     }
 }
