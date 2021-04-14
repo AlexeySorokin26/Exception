@@ -56,7 +56,6 @@ namespace MyExceptionTask
         }
    
     }
-
     public class ExcExamples
     {
         public static void ExceptionExamples()
